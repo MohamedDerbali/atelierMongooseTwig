@@ -1,0 +1,13 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+    <h1>{{title}}</h1>
+    <form method="post" action="http://localhost:3000/contacts/edit/{{cont._id}}">
+		FullName:
+		<input type="text" name="FullName" placeholder="your fullname" value={{cont.FullName}} /><br/>
+		Phone:
+		<input type="number" name="Phone" value={{cont.Phone}} /><br/>
+		<button type="submit">Edit New Contact</button>
+	</form>
+
+{% endblock %}
